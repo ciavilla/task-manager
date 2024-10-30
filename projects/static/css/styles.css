@@ -1,0 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&family=Roboto+Condensed:ital,wght@0,100..900;1,100..900&display=swap');
+
+
+* {
+    font-family: "Nunito", sans-serif;
+}
+
+.error {
+    color: red;
+    margin-bottom: 20px;
+    font-weight: bold;
+    border: 1px solid red;  /* Adds a border around the message */
+    background-color: #f8d7da;  /* Light red background */
+    padding: 10px;  /* Adds some padding */
+    border-radius: 5px;  /* Rounds the corners */
+}
+
