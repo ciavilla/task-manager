@@ -1,3 +1,4 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
     <head>
@@ -6,6 +7,7 @@
         <title>
             {% block title %}Project Tracker{% endblock %}
         </title>
+        <link rel="stylesheet" href="{% static 'css/app.css' %}">
     </head>
     <body>
         <header>
