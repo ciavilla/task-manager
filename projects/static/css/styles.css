@@ -143,11 +143,44 @@ form button {
     font-weight: bold;
     text-transform: uppercase;
     display: block;
-    margin: 0 auto; 
+    margin: 0 auto;
 }
 
 form button:hover {
     background-color: #7e827a;
 }
 
+form input[type="date"] {
+    width: 95%;
+    padding: 12px;
+    margin-bottom: 16px;
+    border: 1px solid #2F343B;
+    border-radius: 4px;
+    font-size: 16px;
+    background-color: #7e827a;
+}
 
+.task-status-form {
+    max-width: 200px;
+    margin: 0;
+    padding: 8px;
+    background-color: #e3cda4;
+    border: 1px solid #c77966;
+    border-radius: 4px;
+    text-align: center;
+}
+
+.task-status-form button {
+    background-color: #703030;
+    color: white;
+    font-size: 14px;
+    padding: 6px 12px;
+    border: none;
+    cursor: pointer;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+.task-status-form button:hover {
+    background-color: #3b6c7b;
+}

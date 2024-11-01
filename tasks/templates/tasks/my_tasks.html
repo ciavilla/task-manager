@@ -13,15 +13,24 @@
                             <th>Start Date</th>
                             <th>Due Date</th>
                             <th>Is Completed</th>
+                            <th>Actions</th>
                         </tr>
                     </thead>
                     <tbody>
                         {% for task in tasks %}
                             <tr>
                                 <td>{{ task.name }}</td>
-                                <td>{{ task.start_date }}</td>
-                                <td>{{ task.due_date }}</td>
+                                <td>{{ task.start_date|date:"m/d/Y" }}</td>
+                                <td>{{ task.due_date|date:"m/d/Y" }}</td>
                                 <td>{{ task.is_completed|yesno:"yes,no" }}</td>
+                                <td>
+                                    <form method="post" action="{% url 'update_task_status' task.id %}" class="task-status-form">
+                                        {% csrf_token %}
+                                        <button type="submit">
+                                            {% if task.is_completed %}Mark as Incomplete{% else %}Mark as Completed{% endif %}
+                                        </button>
+                                    </form>
+                                </td>
                             </tr>
                         {% endfor %}
                     </tbody>
