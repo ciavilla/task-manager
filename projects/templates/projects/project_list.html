@@ -4,9 +4,9 @@
 {% block content %}
     <main>
         <div>
-            <h1>My Projects</h1>
-            <p>
-                <a href="{% url 'create_project' %}">Create a new project</a>
+            <h1 class="page-title">My Projects</h1>
+            <p class="link">
+                <a href="{% url 'create_project' %}" class="top-link">Create a new project</a>
             </p>
             {% if projects %}
                 <table class="table">
@@ -20,7 +20,7 @@
                         {% for project in projects %}
                             <tr>
                                 <td>
-                                    <a href="{% url 'show_project' project.id %}">{{ project.name }}</a>
+                                    <a href="{% url 'show_project' project.id %}" class="project-link">{{ project.name }}</a>
                                 </td>
                                 <td>{{ project.tasks.all|length }}</td>
                             </tr>
@@ -28,7 +28,7 @@
                     </tbody>
                 </table>
             {% else %}
-                <p>You are not assigned to any projects.</p>
+                <p class="empty-message">You are not assigned to any projects.</p>
             {% endif %}
         </div>
     </main>

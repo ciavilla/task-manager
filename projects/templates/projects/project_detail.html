@@ -4,14 +4,14 @@
 {% block content %}
     <main>
         <div>
-            <h1>{{ project.name }}</h1>
-            <p>{{ project.description }}</p>
-            <h2>Tasks</h2>
+            <h1 class="page-title">{{ project.name }}</h1>
+            <p class="project-description">{{ project.description }}</p>
+            <h2 class="tasks-title">Tasks</h2>
             <p>
-                <a href="{% url 'create_task' %}">Create a new task</a>
+                <a href="{% url 'create_task' %}" class="task-link">Create a new task</a>
             </p>
             {% if project.tasks.all %}
-                <table>
+                <table class="table">
                     <thead>
                         <tr>
                             <th>Name</th>
@@ -34,7 +34,7 @@
                     </tbody>
                 </table>
             {% else %}
-                <p>This project has no tasks</p>
+                <p class="empty-message">This project has no tasks</p>
             {% endif %}
         </div>
     </main>
