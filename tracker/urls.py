@@ -17,15 +17,14 @@ Including another URLconf
 
 from django.contrib import admin
 from django.urls import path, include
-from django.shortcuts import redirect
 
-def redirect_to_projects(request):
-    return redirect('list_projects')
+from accounts import views as account_views
+
 
 urlpatterns = [
     path("admin/", admin.site.urls),
     path('projects/', include('projects.urls')),
-    path('', redirect_to_projects, name='home'),
+    path('', account_views.home, name='home'),
     path('accounts/', include('accounts.urls')),
     path('tasks/', include('tasks.urls')),
 ]

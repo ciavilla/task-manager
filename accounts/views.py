@@ -51,3 +51,6 @@ def signup_view(request):
         form = SignupForm()
     return render(request, "accounts/signup.html", {"form": form})
 
+
+def home(request):
+    return render(request, 'accounts/home.html')

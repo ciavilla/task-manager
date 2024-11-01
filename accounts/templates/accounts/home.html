@@ -1,0 +1,16 @@
+{% extends 'base.html' %}
+
+{% block title %}Home{% endblock %}
+
+{% block content %}
+    <main>
+        <h1 class="page-title">Welcome to the Task Tracker</h1>
+        <p class="project-description">Your go-to tool for managing tasks efficiently.</p>
+        <p class="home-text">
+            <a href="{% url 'login' %}" class="home-link">Login</a>
+            or
+            <a href="{% url 'signup' %}" class="home-link">Sign Up</a>
+            to get started.
+        </p>
+    </main>
+{% endblock %}

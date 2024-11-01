@@ -184,3 +184,20 @@ form input[type="date"] {
 .task-status-form button:hover {
     background-color: #3b6c7b;
 }
+
+.home-text {
+    text-align: center; /* Centers the text and links */
+    margin: 20px 0; /* Adds vertical spacing */
+}
+
+.home-link {
+    color: #c77966;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: 500;
+}
+
+.home-link:hover {
+    text-decoration: none;
+    color: #e3cda4; /* Change color on hover */
+}
