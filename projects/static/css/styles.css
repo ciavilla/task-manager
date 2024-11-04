@@ -13,6 +13,29 @@ a:hover {
     color: #e3cda4;
 }
 
+nav {
+    background-color: #f4f4f4;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+}
+
+nav ul li a {
+    padding: 8px 16px;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav ul li a:hover {
+    background-color: #703030;
+}
+
 .nav-link {
     color: #703030;
     text-decoration: none;
@@ -67,10 +90,20 @@ a:hover {
 }
 
 .table {
-    width: 100%;
+    width: 90%;
     margin: 20px auto;
+    border-collapse: collapse;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
+.table th, .table td {
+    padding: 12px;
+    border-bottom: 1px solid #ddd;
+}
+
+.table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
 .table th {
     font-size: 19px;
     text-align: center;
@@ -124,7 +157,7 @@ form input, form textarea, form select {
     border-radius: 4px;
     font-size: 16px;
     cursor: pointer;
-    background-color: #7e827a;
+    background-color: #f7f7f7;
 }
 
 form input:focus, form textarea:focus, form select:focus {
@@ -157,9 +190,13 @@ form input[type="date"] {
     border: 1px solid #2F343B;
     border-radius: 4px;
     font-size: 16px;
-    background-color: #7e827a;
+    background-color: #f7f7f7;
 }
 
+form input, form textarea, form select {
+    background-color: #f7f7f7;
+    padding: 14px;
+}
 .task-status-form {
     max-width: 200px;
     margin: 0;
@@ -201,3 +238,22 @@ form input[type="date"] {
     text-decoration: none;
     color: #e3cda4; /* Change color on hover */
 }
+
+button, .task-status-form button {
+    transition: background-color 0.3s, transform 0.2s;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+}
+
+button:hover, .task-status-form button:hover {
+    transform: translateY(-2px);
+    background-color: #5e2f2f;
+}
+
+a, .home-link {
+    transition: color 0.3s;
+}
+
+a:hover, .home-link:hover {
+    color: #c77966;
+}
+

@@ -9,7 +9,9 @@
                 <table class="table">
                     <thead>
                         <tr>
+                            <th>Project</th>
                             <th>Name</th>
+                            <th>Assignee</th>
                             <th>Start Date</th>
                             <th>Due Date</th>
                             <th>Is Completed</th>
@@ -19,7 +21,9 @@
                     <tbody>
                         {% for task in tasks %}
                             <tr>
+                                <td>{{ task.project }}</td>
                                 <td>{{ task.name }}</td>
+                                <td>{{ task.assignee }}</td>
                                 <td>{{ task.start_date|date:"m/d/Y" }}</td>
                                 <td>{{ task.due_date|date:"m/d/Y" }}</td>
                                 <td>{{ task.is_completed|yesno:"yes,no" }}</td>
