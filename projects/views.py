@@ -4,7 +4,6 @@ from .models import Project
 from .forms import ProjectForm
 
 
-
 # Create your views here.
 @login_required
 def list_projects(request):
@@ -37,4 +36,3 @@ def create_project(request):
     else:
         form = ProjectForm()
     return render(request, "projects/project_create.html", {"form": form})
-
